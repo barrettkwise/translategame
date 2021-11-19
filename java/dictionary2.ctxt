@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=dictionary2
+comment1.params=
+comment1.target=dictionary2()
+comment2.params=p
+comment2.target=dictionary2(java.util.ArrayList)
+comment3.params=
+comment3.target=java.util.ArrayList\ getPhrase()
+numComments=4
