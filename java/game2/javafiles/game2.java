@@ -1,3 +1,5 @@
+package game2;
+
 import java.util.Scanner;
 import java.io.IOException;
 import java.util.ArrayList;

@@ -36,7 +36,7 @@ def phrases(word):
 
 def main():
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-        s.bind(("localhost",9000))
+        s.bind(("localhost", 9000))
         s.listen(10) 
         connection, address = s.accept()
         with connection:
@@ -47,10 +47,12 @@ def main():
            word = word.replace('b', '', 1)
            if "," in word:
                finalresult2 = phrases(word)
+               ##sending phrase to java
                connection.send(finalresult2)
                connection.close()
            else:
                finalresult = word2(word)
+               ##sending word to java
                connection.send(finalresult)
                connection.close()
                
