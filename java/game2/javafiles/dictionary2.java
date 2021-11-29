@@ -1,10 +1,9 @@
-import java.util.Scanner;
-import java.util.Random;
-import java.nio.file.Files;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.Scanner;
 
 //this program gathers the phrase to be translated
 //for game 2

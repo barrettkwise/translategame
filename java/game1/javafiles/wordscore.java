@@ -1,7 +1,4 @@
-import java.util.Scanner;
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.net.*;
 
 //this program scores words depending on their
@@ -62,6 +59,7 @@ public class wordscore {
             else if (answer2 >= 0.01 && answer2 < 0.10) {
                 score = 10;
             }
+            s.close();
         }
         catch (Exception e) { 
             System.err.println("Connection Error!"); 
