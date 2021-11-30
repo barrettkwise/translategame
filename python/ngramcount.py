@@ -3,9 +3,11 @@ import requests
 import urllib
 
 def word2(word):  
+    word = word.replace("'", '', -1)
+    print("Word sent to api: ", word)
     encoded_query = urllib.parse.quote(word)
-    params = {'corpus': 'eng-us', 'query': encoded_query, 'topk': 3, 'format': 'tsv'} 
-    params = '&'.join('{}={}'.format(name, value) for name, value in params.items()) 
+    params = {'corpus': 'eng-us', 'query': encoded_query, 'topk': 3, 'format': 'tsv'}
+    params = '&'.join('{}={}'.format(name, value) for name, value in params.items())
     response = requests.get('https://api.phrasefinder.io/search?' + params)
     assert response.status_code == 200
     print(response.text)
@@ -20,6 +22,7 @@ def phrases(word):
     print(phrase, type(phrase))
     for x, y in enumerate(phrase):
         word2 = phrase[x]
+        word2 = word2.replace("'", '', -1)
         word2 = word2 + word2
     word2 = bytes(word2, 'utf-8')
     encoded_query = urllib.parse.quote(word2)
