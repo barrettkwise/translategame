@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class game1 {
-    public game1() throws IOException {    
+    public static void main(String args[]) throws IOException {    
         //intro to game
         Scanner in = new Scanner (System.in);
         System.out.println("Welcome to Language Jeopardy!");
