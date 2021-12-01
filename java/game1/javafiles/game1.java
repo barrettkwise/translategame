@@ -6,7 +6,7 @@ public class game1 {
     public static void main(String args[]) throws IOException {    
         //intro to game
         Scanner in = new Scanner (System.in);
-        System.out.println("Welcome to Language Jeopardy!");
+        System.out.println("Welcome to Word Jeopardy!");
         System.out.println("In this game, you will guess what words in foreign languages mean.");
         String w = "";
         boolean value = false;

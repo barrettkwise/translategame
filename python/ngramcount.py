@@ -20,12 +20,18 @@ def word2(word):
 def phrases(word):
     phrase = word.split(",", -1)
     print(phrase, type(phrase))
-    for x, y in enumerate(phrase):
+    x = 0
+    ##convert list to string 
+    while x < 4:
         word2 = phrase[x]
-        word2 = word2.replace("'", '', -1)
-        word2 = word2 + word2
-    word2 = bytes(word2, 'utf-8')
-    encoded_query = urllib.parse.quote(word2)
+        print(x)
+        word2 = word2.replace("'", '', -1) 
+        x = x + 1
+        wordphrase = ""
+        wordphrase = word2 + wordphrase 
+    print(wordphrase)
+    wordphrase = bytes(word2, 'utf-8')
+    encoded_query = urllib.parse.quote(wordphrase)
     params = {'corpus': 'eng-us', 'query': encoded_query, 'topk': 3, 'format': 'tsv'} 
     params = '&'.join('{}={}'.format(name, value) for name, value in params.items()) 
     response = requests.get('https://api.phrasefinder.io/search?' + params)

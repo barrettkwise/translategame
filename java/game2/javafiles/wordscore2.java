@@ -37,6 +37,8 @@ public class wordscore2 {
             //getting result (%)
             String answer = in.readLine(); 
             float answer2 = Float.parseFloat(answer);
+            String answer3 = String.format("%.2f", answer2);
+            answer2 = Float.parseFloat(answer3);
             if (answer2 >= 0.90) {
                 score = 1;
             }
