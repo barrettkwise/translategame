@@ -18,6 +18,7 @@ public class result {
     public result (String result, int score) {
         //writing names to file
         try {
+            this.score = score;
             File file = new File("results.txt");
             FileWriter filewrite = new FileWriter(file, true);
             Scanner in = new Scanner (System.in);
@@ -26,7 +27,7 @@ public class result {
             out.append("\n");
             out.append("player name: " + result + ", score: " + score);
             
-            System.out.println("Name saved.");
+            System.out.println("Name saved in: " + file);
             out.close();
             in.close();
         }

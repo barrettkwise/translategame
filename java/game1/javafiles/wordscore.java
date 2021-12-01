@@ -13,9 +13,8 @@ public class wordscore {
     }
 
     public wordscore(String word, int score) {
-        this.word = word;
-        this.score = score;
-        try { 
+        try {
+            this.score = score; 
             InetAddress localhost = InetAddress.getByName("localhost"); 
             Socket s = new Socket(localhost, 9000); 
             OutputStreamWriter out = new OutputStreamWriter(s.getOutputStream()); 
@@ -28,36 +27,45 @@ public class wordscore {
             String answer = in.readLine();
             System.out.println(answer);
             float answer2 = Float.parseFloat(answer);
-            System.out.println(answer2);
             if (answer2 >= 0.90) {
-                score = 1;
+                this.score = 1;
+                System.out.println("Word assigned score: " + this.score);
             }
             else if (answer2 >= 0.80 && answer2 < 0.90) {
-                score = 2;
+                this.score = 2;
+                System.out.println("Word assigned score: " + this.score);
             }
             else if (answer2 >= 0.70 && answer2 < 0.80) {
-                score = 3;
+                this.score = 3;
+                System.out.println("Word assigned score: " + this.score);
             }
             else if (answer2 >= 0.60 && answer2 < 0.70) {
-                score = 4;
+                this.score = 4;
+                System.out.println("Word assigned score: " + this.score);
             }
             else if (answer2 >= 0.50 && answer2 < 0.60) {
-                score = 5;
+                this.score = 5;
+                System.out.println("Word assigned score: " + this.score);
             }
             else if (answer2 >= 0.40 && answer2 < 0.50) {
-                score = 6;
+                this.score = 6;
+                System.out.println("Word assigned score: " + this.score);
             }
             else if (answer2 >= 0.30 && answer2 < 0.40) {
-                score = 7;
+                this.score = 7;
+                System.out.println("Word assigned score: " + this.score);
             }
             else if (answer2 >= 0.20 && answer2 < 0.30) {
-                score = 8;
+                this.score = 8;
+                System.out.println("Word assigned score: " + this.score);
             }
             else if (answer2 >= 0.10 && answer2 < 0.20) {
-                score = 9;
+                this.score = 9;
+                System.out.println("Word assigned score: " + this.score);
             }
             else if (answer2 >= 0.01 && answer2 < 0.10) {
-                score = 10;
+                this.score = 10;
+                System.out.println("Word assigned score: " + this.score);
             }
             s.close();
         }

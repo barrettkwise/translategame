@@ -8,7 +8,6 @@ public class game1 {
         Scanner in = new Scanner (System.in);
         System.out.println("Welcome to Language Jeopardy!");
         System.out.println("In this game, you will guess what words in foreign languages mean.");
-        ArrayList <String> win = new ArrayList <String> (); //stores winner names
         String w = "";
         boolean value = false;
 
@@ -19,6 +18,7 @@ public class game1 {
         int score = 0;
         wordscore word = new wordscore(z, score);
         word.setWord(z);
+        //getting score to send to result
         score = word.getScore();
 
         //setting lang1 and lang2
