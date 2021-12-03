@@ -21,27 +21,28 @@ def phrases(word):
     phrase = word.split(",", -1)
     print(phrase, type(phrase))
     x = 0
+    results = []
+    print(type(results))
     ##convert list to string 
     while x < 4:
         word2 = phrase[x]
         print(x)
         word2 = word2.replace("'", '', -1) 
+        wordphrase = bytes(word2, 'utf-8')
+        encoded_query = urllib.parse.quote(word2)
+        params = {'corpus': 'eng-us', 'query': encoded_query, 'topk': 3, 'format': 'tsv'} 
+        params = '&'.join('{}={}'.format(name, value) for name, value in params.items()) 
+        response = requests.get('https://api.phrasefinder.io/search?' + params)
+        assert response.status_code == 200
+        print(response.text)
+        results = response.text
+        results2 = results.split()
+        finalresult2 = results2[6]
+        finalresult2 = bytes(finalresult2, 'utf-8')
+        results.append(finalresult2)
         x = x + 1
-        wordphrase = ""
-        wordphrase = word2 + wordphrase 
-    print(wordphrase)
-    wordphrase = bytes(word2, 'utf-8')
-    encoded_query = urllib.parse.quote(wordphrase)
-    params = {'corpus': 'eng-us', 'query': encoded_query, 'topk': 3, 'format': 'tsv'} 
-    params = '&'.join('{}={}'.format(name, value) for name, value in params.items()) 
-    response = requests.get('https://api.phrasefinder.io/search?' + params)
-    assert response.status_code == 200
-    print(response.text)
-    results = response.text
-    results2 = results.split()
-    finalresult2 = results2[6]
-    finalresult2 = bytes(finalresult2, 'utf-8')
-    return finalresult2
+    print(results)
+    return results
 
 def main():
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
