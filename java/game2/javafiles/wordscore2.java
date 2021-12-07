@@ -1,8 +1,8 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.net.InetAddress;
-import java.net.Socket;
+import java.util.Scanner;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.net.*;
 import java.util.ArrayList;
 
 //this program scores phrases depending on their
@@ -17,7 +17,6 @@ public class wordscore2 {
     }
 
     public wordscore2(ArrayList <String> word, int score) {
-        this.word = word;
         this.score = score;
         try { 
             InetAddress localhost = InetAddress.getByName("localhost"); 
@@ -30,45 +29,54 @@ public class wordscore2 {
                 if (i <= 2) {
                     word2 += ",";
                 }
-                out.write(word2); 
+                out.write(word2);
                 out.flush();
             }
 
             //getting result (%)
-            String answer = in.readLine(); 
+            String answer = in.readLine();
             float answer2 = Float.parseFloat(answer);
-            String answer3 = String.format("%.2f", answer2);
-            answer2 = Float.parseFloat(answer3);
             if (answer2 >= 0.90) {
-                score = 1;
+                this.score = 1;
+                System.out.println("Phrase assigned score: " + this.score);
             }
             else if (answer2 >= 0.80 && answer2 < 0.90) {
-                score = 2;
+                this.score = 2;
+                System.out.println("Phrase assigned score: " + this.score);
             }
             else if (answer2 >= 0.70 && answer2 < 0.80) {
-                score = 3;
+                this.score = 3;
+                System.out.println("Phrase assigned score: " + this.score);
             }
             else if (answer2 >= 0.60 && answer2 < 0.70) {
-                score = 4;
+                this.score = 4;
+                System.out.println("Phrase assigned score: " + this.score);
             }
             else if (answer2 >= 0.50 && answer2 < 0.60) {
-                score = 5;
+                this.score = 5;
+                System.out.println("Phrase assigned score: " + this.score);
             }
             else if (answer2 >= 0.40 && answer2 < 0.50) {
-                score = 6;
+                this.score = 6;
+                System.out.println("Phrase assigned score: " + this.score);
             }
             else if (answer2 >= 0.30 && answer2 < 0.40) {
-                score = 7;
+                this.score = 7;
+                System.out.println("Phrase assigned score: " + this.score);
             }
             else if (answer2 >= 0.20 && answer2 < 0.30) {
-                score = 8;
+                this.score = 8;
+                System.out.println("Phrase assigned score: " + this.score);
             }
             else if (answer2 >= 0.10 && answer2 < 0.20) {
-                score = 9;
+                this.score = 9;
+                System.out.println("Phrase assigned score: " + this.score);;
             }
             else if (answer2 >= 0.01 && answer2 < 0.10) {
-                score = 10;
+                this.score = 10;
+                System.out.println("Phrase assigned score: " + this.score);
             }
+
         } catch (Exception e) { 
             System.err.println("Connection Error"); 
             e.printStackTrace(); 

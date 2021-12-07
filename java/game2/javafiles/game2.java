@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class game2 {
-    public static void main(String args[]) throws IOException {    
+    public static void main(String args[]) throws IOException {
         String w = "";
         String b = null;
         Boolean value = false;
@@ -44,6 +44,7 @@ public class game2 {
         a = k;
         wordscore2 word2 = new wordscore2(a, score);
         word2.setWord(a);
+        //getting score to send to result
         score = word2.getScore();
         //game start
         System.out.print("What does this phrase mean:");
