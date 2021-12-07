@@ -1,6 +1,7 @@
 import socket
 import requests
 import urllib
+from decimal import *
 
 def word2(word):  
     word = word.replace("'", '', -1)
@@ -21,14 +22,12 @@ def phrases(word):
     phrase = word.split(",", -1)
     print(phrase, type(phrase))
     x = 0
-    results = []
-    print(type(results))
+    listresults = []
     ##convert list to string 
     while x < 4:
         word2 = phrase[x]
-        print(x)
+        print("Word #", x, " sent to api.")
         word2 = word2.replace("'", '', -1) 
-        wordphrase = bytes(word2, 'utf-8')
         encoded_query = urllib.parse.quote(word2)
         params = {'corpus': 'eng-us', 'query': encoded_query, 'topk': 3, 'format': 'tsv'} 
         params = '&'.join('{}={}'.format(name, value) for name, value in params.items()) 
@@ -38,11 +37,26 @@ def phrases(word):
         results = response.text
         results2 = results.split()
         finalresult2 = results2[6]
-        finalresult2 = bytes(finalresult2, 'utf-8')
-        results.append(finalresult2)
+        finalresult2 = float(finalresult2)
+        print(type(finalresult2))
+        listresults.append(finalresult2)
         x = x + 1
-    print(results)
-    return results
+    print(listresults)
+    y = 0
+    addsum = 0
+    while y < 4:
+        num = listresults[y]
+        addsum = num + addsum
+        y = y + 1
+    average = addsum / 4
+    getcontext().prec = 2
+    average = Decimal(average).quantize(Decimal('0.01'), rounding = ROUND_UP)
+    print(average)
+    average = average.to_eng_string()
+    print(average)
+    average = bytes(average, 'utf-8')
+    print("Number sent to Java: ", average)
+    return average
 
 def main():
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
@@ -56,9 +70,9 @@ def main():
            word = str(word)
            word = word.replace('b', '', 1)
            if "," in word:
-               finalresult2 = phrases(word)
+               average = phrases(word)
                ##sending phrase to java
-               connection.send(finalresult2)
+               connection.send(average)
                connection.close()
            else:
                finalresult = word2(word)
