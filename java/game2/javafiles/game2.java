@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class game2 {
-    public static void main(String args[]) throws IOException {
+    public static void game2() throws IOException {    
         String w = "";
         String b = null;
         Boolean value = false;
