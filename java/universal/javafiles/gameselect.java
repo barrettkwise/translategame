@@ -6,6 +6,10 @@ import java.io.IOException;
 public class gameselect {
     public static void main(String args[]) {
         try {
+            //String[] cmdArray = new String[2];
+            //cmdArray[0] = "python.exe";
+            //cmdArray[1] = "ngramcount.py";
+            //Process p = Runtime.getRuntime().exec(cmdArray, null);
             Scanner in = new Scanner (System.in);
             game1 g = new game1();
             game2 f = new game2();

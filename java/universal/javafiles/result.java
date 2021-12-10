@@ -28,6 +28,10 @@ public class result {
             out.append("player name: " + result + ", score: " + score);
             
             System.out.println("Name saved in: " + file);
+            String[] cmdArray = new String[2];
+            cmdArray[0] = "notepad.exe";
+            cmdArray[1] = "results.txt";
+            Process p = Runtime.getRuntime().exec(cmdArray, null);
             out.close();
             in.close();
         }
