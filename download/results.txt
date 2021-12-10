@@ -1,6 +1,0 @@
-player name: john, score: 0
-player name: henry, score: 0
-player name: tyler, score: 0
-player name: john, score: 0
-player name: larry, score: 0
-player name: tyler, score: 0

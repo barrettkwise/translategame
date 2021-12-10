@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=wordscore2
+comment1.params=
+comment1.target=wordscore2()
+comment2.params=word\ score
+comment2.target=wordscore2(java.util.ArrayList,\ int)
+comment3.params=word
+comment3.target=void\ setWord(java.util.ArrayList)
+comment4.params=
+comment4.target=int\ getScore()
+numComments=5

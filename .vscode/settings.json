@@ -1,3 +1,7 @@
 {
-    "python.pythonPath": "C:\\Users\\Barrett\\AppData\\Local\\Programs\\Python\\Python310\\python.exe"
+    "python.pythonPath": "C:\\Users\\Barrett\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "java.project.sourcePaths": [
+        "java/game1/javafiles",
+        "java/universal/javafiles"
+    ]
 }

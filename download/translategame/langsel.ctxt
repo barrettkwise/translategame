@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=langsel
+comment1.params=
+comment1.target=langsel()
+comment2.params=setlang
+comment2.target=langsel(java.lang.String)
+comment3.params=setlang
+comment3.target=void\ setLang(java.lang.String)
+comment4.params=
+comment4.target=java.lang.String\ getLang()
+comment5.params=
+comment5.target=java.lang.String\ getLang2()
+numComments=6

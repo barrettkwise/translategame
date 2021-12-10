@@ -1,0 +1,7 @@
+
+player name: barrett, score: 2
+player name: barrett, score: 1
+player name: pen15, score: 4
+player name: barrett, score: 2
+player name: Your Mom, score: 1
+player name: joe, score: 2
