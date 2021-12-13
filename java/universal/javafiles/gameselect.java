@@ -7,14 +7,20 @@ public class gameselect {
     public static void main(String args[]) throws IOException {
         //select game
         try {
+            System.out.println("Welcome to TranslateGame!");
+            Scanner in = new Scanner(System.in);
+            downloader d = new downloader();
+            d.downloader();
+            System.out.println("Enter the name assigned to your Windows user: ");
+            String name = in.nextLine();
             //start python
-            ProcessBuilder pb = new ProcessBuilder("python", "C:/Users/Barrett/Documents/ngramcount.py");
+            String app = "py";
+            String path = "C:/Users/" + name + "/Downloads/translategame-master/download/ngramcount.py";
+            ProcessBuilder pb = new ProcessBuilder(app, path);
             Process p = pb.start();
-            Scanner in = new Scanner (System.in);
             game1 g = new game1();
             game2 f = new game2();
             int choice = 0;
-            System.out.println("Welcome to TranslateGame!");
             System.out.println("Type 1 for game1 (words) or 2 for game2 (phrases)");
             while (choice != 1 && choice != 2) {
                 choice = in.nextInt();
