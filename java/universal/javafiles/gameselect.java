@@ -2,14 +2,14 @@ import java.util.Scanner;
 import java.io.IOException;
 
 //makes it easier for user to
-//select game
+//select game/start python
 public class gameselect {
-    public static void main(String args[]) {
+    public static void main(String args[]) throws IOException {
+        //select game
         try {
-            //String[] cmdArray = new String[2];
-            //cmdArray[0] = "python.exe";
-            //cmdArray[1] = "ngramcount.py";
-            //Process p = Runtime.getRuntime().exec(cmdArray, null);
+            //start python
+            ProcessBuilder pb = new ProcessBuilder("python", "C:/Users/Barrett/Documents/ngramcount.py");
+            Process p = pb.start();
             Scanner in = new Scanner (System.in);
             game1 g = new game1();
             game2 f = new game2();
