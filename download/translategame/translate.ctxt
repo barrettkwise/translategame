@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=translate
+comment1.params=
+comment1.target=translate()
+comment2.params=langFrom\ langTo\ text
+comment2.target=translate(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment3.params=langFrom\ langTo\ text
+comment3.target=java.lang.String\ translate(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment4.params=langFrom
+comment4.target=void\ setInitLang(java.lang.String)
+comment5.params=langTo
+comment5.target=void\ setEndLang(java.lang.String)
+comment6.params=text
+comment6.target=void\ setText(java.lang.String)
+comment7.params=
+comment7.target=java.lang.String\ getInitLang()
+comment8.params=
+comment8.target=java.lang.String\ getEndLang()
+comment9.params=
+comment9.target=java.lang.String\ getText()
+numComments=10

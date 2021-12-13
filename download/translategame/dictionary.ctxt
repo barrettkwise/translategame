@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=dictionary
+comment1.params=
+comment1.target=dictionary()
+comment2.params=line
+comment2.target=dictionary(java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getLine()
+numComments=4

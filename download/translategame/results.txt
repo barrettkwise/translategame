@@ -1,0 +1,3 @@
+
+player name: lary, score: 1
+player name: joe, score: 4
