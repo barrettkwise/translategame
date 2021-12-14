@@ -36,7 +36,7 @@ public class gameselect {
             }
         }
         catch(IOException e) {
-            System.out.println("No.");
+            System.out.println("Could not find python script.");
         }
     }
 }
