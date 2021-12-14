@@ -1,8 +1,6 @@
-## Welcome to GitHub Pages
+## TranslateGame
 
-You can use the [editor on GitHub](https://github.com/turt1edman/translategame/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Welcome to my page! Here I will store the download for TranslateGame, a game were you guess what words in different languages mean.
 
 ### Markdown
 
