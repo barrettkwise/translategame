@@ -19,7 +19,7 @@ public class dictionary {
             Random random = new Random();
             Scanner in = new Scanner (System.in);
             int count = 0;
-            int rand = 1 + random.nextInt(8110);
+            int rand = 1 + random.nextInt(58110);
             //read file name from standard input
             File file = new File("words.txt");
             //overwrite scanner to read file
