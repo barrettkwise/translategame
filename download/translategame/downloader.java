@@ -18,7 +18,7 @@ public class downloader {
                     String cmd = "status.txt";
                     ProcessBuilder pb = new ProcessBuilder(app, cmd);
                     pb.start();
-                    System.out.println("Module already installed");
+                    System.out.println("Module already installed.");
                 }
             }
             in.close();
@@ -35,7 +35,7 @@ public class downloader {
             BufferedWriter write = new BufferedWriter(filewrite);
             write.write("yes");
             write.close();
-            System.out.println("Module installed");
+            System.out.println("Module installed.");
         }
     }
 }
