@@ -14,10 +14,6 @@ public class downloader {
             while (in.hasNextLine()) {
                 read = in.nextLine();
                 if (read.equalsIgnoreCase("yes")) {
-                    String app = "notepad.exe";
-                    String cmd = "status.txt";
-                    ProcessBuilder pb = new ProcessBuilder(app, cmd);
-                    pb.start();
                     System.out.println("Module already installed.");
                 }
             }

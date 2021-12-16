@@ -1,10 +1,5 @@
 import java.util.Scanner;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.lang.ProcessBuilder;
-import java.lang.Process;
-
 
 public class game1 {
     public static void game1() throws IOException {

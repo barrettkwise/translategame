@@ -21,22 +21,23 @@ public class gameselect {
             game1 g = new game1();
             game2 f = new game2();
             int choice = 0;
-            System.out.println("Type 1 for game1 (words) or 2 for game2 (phrases)");
-            while (choice != 1 && choice != 2) {
+            do {
+                System.out.println("Type 1 for game1 (words) or 2 for game2 (phrases)");
                 choice = in.nextInt();
                 if (choice != 1 && choice != 2) {
-                    System.out.println("No game associated with that number.");
+                    System.out.println("Not game assigned to that number.");
                 }
             }
+            while (choice != 1 && choice != 2);
             if (choice == 1) {
                 g.game1();
             }
-            else if (choice == 2) {
+            else {
                 f.game2();
             }
         }
         catch(IOException e) {
-            System.out.println("Could not find python script.");
+            System.out.println("Could not find Python script.");
         }
     }
 }

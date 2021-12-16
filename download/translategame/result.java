@@ -1,7 +1,5 @@
 import java.util.Scanner;
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
 //this program stores the names of the winners of games 1 and 2
 //in results.txt
