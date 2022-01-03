@@ -1,7 +1,7 @@
-import java.util.Scanner;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 //this program makes it easier for the user to 
 //select their language in game 1 and 2

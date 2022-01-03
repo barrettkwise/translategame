@@ -1,5 +1,8 @@
-import java.io.*;
-import java.net.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.InetAddress;
+import java.net.Socket;
 
 //this program scores words depending on their
 //occurence in google ngram by using Python

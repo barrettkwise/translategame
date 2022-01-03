@@ -1,7 +1,7 @@
-import java.util.Scanner;
-import java.util.Random;
 import java.io.File;
 import java.io.IOException;
+import java.util.Random;
+import java.util.Scanner;
 
 //this program gathers the words to be translated
 //for game 1

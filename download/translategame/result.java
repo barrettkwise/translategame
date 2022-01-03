@@ -1,5 +1,8 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
-import java.io.*;
 
 //this program stores the names of the winners of games 1 and 2
 //in results.txt

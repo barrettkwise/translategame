@@ -1,5 +1,5 @@
-import java.util.Scanner;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class game1 {
     public static void game1() throws IOException {

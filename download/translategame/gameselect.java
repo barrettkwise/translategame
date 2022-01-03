@@ -1,5 +1,5 @@
-import java.util.Scanner;
 import java.io.IOException;
+import java.util.Scanner;
 
 //makes it easier for user to
 //select game/start python

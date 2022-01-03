@@ -1,6 +1,6 @@
-import java.util.Scanner;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class game2 {
     public static void game2() throws IOException {    
