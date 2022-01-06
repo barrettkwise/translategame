@@ -6,7 +6,7 @@ This project is mainly written in Java, but utilizes Python and Google Scripts f
 scores to the words/phrases.
 
 How to install:
-1. Download this repository
+1. Download this repository <a href = "https://github.com/turt1edman/translategame/archive/refs/heads/master.zip" download>(Link)</a>
 2. Enter the "download" folder
 3. Double click the "clickheretorun" bat file
 
