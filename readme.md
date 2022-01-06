@@ -1,4 +1,4 @@
-Welcome to TranslateGame!
+<h2> Welcome to TranslateGame! </h2>
 
 In this game, you will guess what words or phrases in other languages mean. 
 
