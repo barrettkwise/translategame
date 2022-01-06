@@ -14,9 +14,8 @@ public class gameselect {
             System.out.println("Enter the name assigned to your Windows user: ");
             String name = in.nextLine();
             //start python
-            String app = "py";
-            String path = "C:/Users/" + name + "/Downloads/translategame-master/download/ngramcount.py";
-            ProcessBuilder pb = new ProcessBuilder(app, path);
+            String path = "C:/Users/" + name + "/Downloads/translategame-master/download/ngramcount.exe";
+            ProcessBuilder pb = new ProcessBuilder(path);
             Process p = pb.start();
             game1 g = new game1();
             game2 f = new game2();
