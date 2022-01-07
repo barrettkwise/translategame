@@ -19,7 +19,15 @@ def word2(word):
     return finalresult
     
 def phrases(word):
-    phrase = word.split(",", -1)
+    phrase = []
+    if "1" in word:
+        phrase = ["hello", "there", "good", "sir"]
+    elif "2" in word:
+        phrase = ["hows", "the", "weather", "today"]
+    elif "3" in word:
+        phrase = ["a", "dime", "a", "dozen"]
+    elif "4" in word:
+        phrase = ["back", "to", "square", "one"]
     print(phrase, type(phrase))
     x = 0
     listresults = []
@@ -29,7 +37,7 @@ def phrases(word):
         print("Word #", x, " sent to api.")
         word2 = word2.replace("'", '', -1) 
         encoded_query = urllib.parse.quote(word2)
-        params = {'corpus': 'eng-us', 'query': encoded_query, 'topk': 3, 'format': 'tsv'} 
+        params = {'corpus': 'eng-us', 'query': encoded_query, 'topk': 2, 'format': 'tsv'} 
         params = '&'.join('{}={}'.format(name, value) for name, value in params.items()) 
         response = requests.get('https://api.phrasefinder.io/search?' + params)
         assert response.status_code == 200
@@ -69,7 +77,7 @@ def main():
            print ("Word(s) received: ", word)
            word = str(word)
            word = word.replace('b', '', 1)
-           if "," in word:
+           if len(word) == 3:
                average = phrases(word)
                ##sending phrase to java
                connection.send(average)

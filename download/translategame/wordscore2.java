@@ -24,13 +24,24 @@ public class wordscore2 {
             OutputStreamWriter out = new OutputStreamWriter(s.getOutputStream()); 
             BufferedReader in = new BufferedReader(new InputStreamReader(s.getInputStream())); 
             //sending phrase
-            for (int i = 0; i < word.size(); i++) {
+            for (int i = 0; i < 1; i++) {
                 String word2 = word.get(i);
-                if (i <= 2) {
-                    word2 += ",";
+                if (word2.equals("hello")) {
+                    out.write("1");
+                    out.flush();
                 }
-                out.write(word2);
-                out.flush();
+                else if (word2.equals("hows")) {
+                    out.write("2");
+                    out.flush();
+                }
+                else if (word2.equals("a")) {
+                    out.write("3");
+                    out.flush();
+                }
+                else {
+                    out.write("4");
+                    out.flush();
+                }
             }
 
             //getting result (%)
