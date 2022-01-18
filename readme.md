@@ -10,4 +10,4 @@ How to install:
 2. Enter the "download" folder
 3. Enter the "translategame" folder
 4. Double click the "clickheretorun" bat file
-5. Enjoy
+5. Enjoy!
