@@ -24,7 +24,7 @@ public class gameselect {
                 System.out.println("Type 1 for game1 (words) or 2 for game2 (phrases)");
                 choice = in.nextInt();
                 if (choice != 1 && choice != 2) {
-                    System.out.println("Not game assigned to that number.");
+                    System.out.println("No game assigned to that number.");
                 }
             }
             while (choice != 1 && choice != 2);
