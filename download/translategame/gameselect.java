@@ -11,8 +11,7 @@ public class gameselect {
             Scanner in = new Scanner(System.in);
             downloader d = new downloader();
             d.downloader();
-            System.out.println("Enter the name assigned to your Windows user: ");
-            String name = in.nextLine();
+            String name = System.getProperty("user.name");
             //start python
             String path = "C:/Users/" + name + "/Downloads/translategame-master/download/ngramcount.exe";
             ProcessBuilder pb = new ProcessBuilder(path);
